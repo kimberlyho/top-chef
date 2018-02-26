@@ -1,0 +1,11 @@
+{
+  "name": "michelin",
+  "version": "1.0.0",
+  "description": "scraping du site du guide michelin pour les restaurants étoilés",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kimberly ho",
+  "license": "ISC"
+}
