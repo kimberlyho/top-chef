@@ -80,9 +80,7 @@ for (var i=0; i<idrestau_lafourchette2.length;i++){
 }
 // console.log(url_moreinfo);
 
-var moreinfo = {
-  lafourchette: []
-};
+
 
 
 function get_MoreInfo_restaurant(){
@@ -92,16 +90,15 @@ function get_MoreInfo_restaurant(){
         var $ = cheerio.load(html);
         resultat = JSON.parse($.text().trim());
            // console.log("ID "+idrestau_lafourchette2[j].id);
-            var special = []
+           var special = [];
             for(var j = 0; j < resultat.length; j++){
-              console.log(resultat[j].is_special_offer);
+              // console.log(resultat[j].is_special_offer);
+              var moreinfo = {lafourchette: []};
               special.push(resultat[j].is_special_offer);
               for (var i = 0; i < idrestau_lafourchette2.length; i++) {
                 // console.log(idrestau_lafourchette2[i].id);
                 idrestau_lafourchette2[i].special = special;
               }
-            //idrestau_lafourchette2[j].special_offer=special;
-            //console.log(idrestau_lafourchette2[j].special_offer);
           }
           // console.log(special);
           // console.log(idrestau_lafourchette2[i].id);
