@@ -8,7 +8,7 @@ var deal_restaurant = [];
 
 
 for (var i = 0; i < michelin_info.length; i++) {
-  // get_ID_restaurant(michelin_info[i]);
+  get_ID_restaurant(michelin_info[i]);
 }
 
 
