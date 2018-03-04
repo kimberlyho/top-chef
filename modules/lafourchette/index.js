@@ -8,7 +8,7 @@ var deal_restaurant = [];
 
 
 for (var i = 0; i < michelin_info.length; i++) {
-  get_ID_restaurant(michelin_info[i]);
+  // get_ID_restaurant(michelin_info[i]);
 }
 
 
@@ -38,9 +38,11 @@ function get_deal_restaurant(restaurant) {
   request({method: 'GET',url:'https://m.lafourchette.com/api/restaurant/' + restaurant.id + '/sale-type'},function(error, response, html){
     if (!error){
       var resultat = JSON.parse(html);
+
       restaurant.deal = [];
       resultat.forEach(function(deal){
-        if (deal.title != 'Simple booking') {
+
+        if (deal.title != 'Simple booking' ) {
             if ('exclusions' in deal) {
               restaurant.deal.push({
                 title: deal.title,
@@ -58,7 +60,7 @@ function get_deal_restaurant(restaurant) {
                 discount_amount: deal.discount_amount
               });
             }
-          }else {
+          } else {
             restaurant.deal.push({
               title: deal.title,
               is_menu: deal.is_menu,

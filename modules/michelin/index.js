@@ -1,8 +1,8 @@
 var cheerio = require('cheerio');
 var fs = require('fs');
-var through = require('through2')
-var fromArray = require('from2-array')
-var https = require('https')
+var through = require('through2');
+var fromArray = require('from2-array');
+var https = require('https');
 var url_page = 'https://restaurant.michelin.fr/restaurants/france/restaurants-1-etoile-michelin/restaurants-2-etoiles-michelin/restaurants-3-etoiles-michelin/page-'
 var url_michelin = 'https://restaurant.michelin.fr'
 

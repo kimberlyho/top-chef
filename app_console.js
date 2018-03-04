@@ -1,4 +1,6 @@
-[{
+var prettyjson = require('prettyjson');
+
+var data = [{
   "name": "Maison Rostang",
   "city": "Paris",
   "zipcode": "75017",
@@ -2130,4 +2132,10 @@
     "is_menu": false,
     "is_special_offer": false
   }]
-}]
+}];
+
+var options = {
+  noColor: true
+};
+
+console.log(prettyjson.render(data, options));
